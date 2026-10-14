@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>UrbanFloraHome | Home Decor, Indoor Plants &amp; Garden Living</title>
+  <meta name="description" content="Discover nature-inspired home decor, indoor plants, stylish planters, and garden essentials for beautiful, comfortable living.">
+  <meta name="theme-color" content="#244735">
+  <link rel="canonical" href="https://urbanflorahome.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UrbanFloraHome">
+  <meta property="og:title" content="UrbanFloraHome | Home Decor, Indoor Plants &amp; Garden Living">
+  <meta property="og:description" content="Discover nature-inspired home decor, indoor plants, stylish planters, and garden essentials for beautiful, comfortable living.">
+  <meta property="og:url" content="https://urbanflorahome.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon: inline SVG leaf -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23244735' d='M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12zm0 18a6 6 0 0 1-6-6c0-.5.06-1 .17-1.5C7.9 15 10.3 16.8 12 19c1.7-2.2 4.1-4 5.83-6.5.11.5.17 1 .17 1.5a6 6 0 0 1-6 6z'/%3E%3C/svg%3E">
+
+  <!-- Fonts: Playfair Display (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UrbanFloraHome",
+    "url": "https://urbanflorahome.com/",
+    "description": "Nature-inspired home decor, indoor plants, planters and garden essentials."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ A. ANNOUNCEMENT BAR ============ -->
+  <!-- Edit the announcement message directly below -->
+  <div class="announcement" role="note">
+    <p id="announcement-text">Bring Nature Home &mdash; Discover Our New Collection.</p>
+  </div>
+
+  <!-- ============ B. HEADER & NAVIGATION ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#home" class="logo" aria-label="UrbanFloraHome — home">
+        <svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12zm0 18a6 6 0 0 1-6-6c0-.5.06-1 .17-1.5C7.9 15 10.3 16.8 12 19c1.7-2.2 4.1-4 5.83-6.5.11.5.17 1 .17 1.5a6 6 0 0 1-6 6z"/>
+        </svg>
+        <span class="logo-text">UrbanFlora<em>Home</em></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#shop" class="nav-link" data-nav-filter="Indoor Plants">Indoor Plants</a></li>
+          <li><a href="#shop" class="nav-link" data-nav-filter="Garden &amp; Outdoor">Garden &amp; Outdoor</a></li>
+          <li><a href="#shop" class="nav-link" data-nav-filter="Home Decor">Home Decor</a></li>
+          <li><a href="#inspiration" class="nav-link">Inspiration</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="search-toggle" aria-label="Search products">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="wishlist-toggle" aria-label="Open wishlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20.5C7 16.5 3 13.2 3 9.3 3 6.4 5.2 4.5 7.7 4.5c1.7 0 3.3.9 4.3 2.4 1-1.5 2.6-2.4 4.3-2.4 2.5 0 4.7 1.9 4.7 4.8 0 3.9-4 7.2-9 11.2z"/></svg>
+          <span class="badge-count" id="wishlist-count" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="cart-toggle" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 8h14l-1.2 12H6.2L5 8z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8.5 10V6.5a3.5 3.5 0 0 1 7 0V10"/></svg>
+          <span class="badge-count" id="cart-count" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile navigation drawer -->
+  <div class="drawer-backdrop" id="nav-backdrop" hidden></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" aria-hidden="true">
+    <div class="mobile-nav-head">
+      <span class="logo-text">UrbanFlora<em>Home</em></span>
+      <button class="icon-btn" id="nav-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#shop" class="mobile-nav-link">Shop</a></li>
+      <li><a href="#shop" class="mobile-nav-link" data-nav-filter="Indoor Plants">Indoor Plants</a></li>
+      <li><a href="#shop" class="mobile-nav-link" data-nav-filter="Garden &amp; Outdoor">Garden &amp; Outdoor</a></li>
+      <li><a href="#shop" class="mobile-nav-link" data-nav-filter="Home Decor">Home Decor</a></li>
+      <li><a href="#inspiration" class="mobile-nav-link">Inspiration</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+    </ul>
+    <p class="mobile-nav-foot">Nature-inspired living, delivered across Europe.</p>
+  </nav>
+
+  <main id="main">
+    <!-- ============ C. HERO ============ -->
+    <section class="hero" id="home" aria-label="Welcome">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80"
+           alt="Sunlit European living room with indoor plants, natural wood furniture and cream sofas" fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">New Season Collection</p>
+        <h1 class="hero-title reveal">Bring Nature Into<br>Every Corner.</h1>
+        <p class="hero-sub reveal">Thoughtfully chosen home and garden essentials for a more beautiful, natural way of living.</p>
+        <div class="hero-cta reveal">
+          <a href="#shop" class="btn btn-primary">Explore Collection</a>
+          <a href="#seasonal" class="btn btn-ghost">Discover Garden Living</a>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#categories" aria-label="Scroll to categories">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ D. FEATURED CATEGORIES ============ -->
+    <section class="section categories" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Curated for You</p>
+          <h2 id="categories-heading">Featured Categories</h2>
+          <p class="section-sub">Everything you need to shape a home that breathes.</p>
+        </header>
+        <div class="category-grid">
+          <a href="#shop" class="category-card reveal" data-nav-filter="Indoor Plants">
+            <img src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?auto=format&fit=crop&w=700&q=80" alt="Fiddle-leaf fig houseplant in a bright interior" loading="lazy">
+            <div class="category-card-body">
+              <h3>Indoor Plants</h3>
+              <p>Living greenery that purifies your space and lifts the mood.</p>
+              <span class="text-link">Explore plants
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="#shop" class="category-card reveal" data-nav-filter="Garden &amp; Outdoor">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80" alt="Rose garden path in a lush European garden" loading="lazy">
+            <div class="category-card-body">
+              <h3>Garden &amp; Outdoor</h3>
+              <p>Furniture, lighting and tools for your open-air retreat.</p>
+              <span class="text-link">Explore outdoor
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="#shop" class="category-card reveal" data-nav-filter="Home Decor">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80" alt="Mid-century styled living room with designer furniture" loading="lazy">
+            <div class="category-card-body">
+              <h3>Home Decor</h3>
+              <p>Warm, timeless pieces for calm and considered interiors.</p>
+              <span class="text-link">Explore decor
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+          <a href="#shop" class="category-card reveal" data-nav-filter="Planters &amp; Pots">
+            <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=700&q=80" alt="Terracotta plant pots arranged on a light background" loading="lazy">
+            <div class="category-card-body">
+              <h3>Planters &amp; Pots</h3>
+              <p>Hand-finished vessels in ceramic, terracotta and fibre.</p>
+              <span class="text-link">Explore planters
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ E. BEST SELLERS / SHOP ============ -->
+    <section class="section shop" id="shop" aria-labelledby="shop-heading">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Our Favourites</p>
+          <h2 id="shop-heading">Best Sellers</h2>
+          <p class="section-sub">Loved by our community across Europe.</p>
+        </header>
+
+        <div class="shop-toolbar reveal" role="region" aria-label="Shop filters">
+          <div class="filter-chips" role="group" aria-label="Filter by category">
+            <button class="filter-chip is-active" data-filter="All">All</button>
+            <button class="filter-chip" data-filter="Indoor Plants">Indoor Plants</button>
+            <button class="filter-chip" data-filter="Garden &amp; Outdoor">Garden &amp; Outdoor</button>
+            <button class="filter-chip" data-filter="Home Decor">Home Decor</button>
+            <button class="filter-chip" data-filter="Planters &amp; Pots">Planters &amp; Pots</button>
+          </div>
+          <label class="sort-label" for="sort-select">Sort
+            <select id="sort-select" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name-asc">Name: A to Z</option>
+              <option value="name-desc">Name: Z to A</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="shop-note" id="shop-note" hidden></p>
+        <div class="product-grid" id="product-grid" aria-live="polite"><!-- rendered by script.js --></div>
+        <p class="demo-note">Demonstration store &mdash; prices, ratings and discounts are sample content, and no real orders or payments are processed.</p>
+      </div>
+    </section>
+
+    <!-- ============ F. BRAND STORY ============ -->
+    <section class="section story" id="about" aria-labelledby="story-heading">
+      <div class="container story-grid">
+        <figure class="story-media reveal">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=900&q=80"
+               alt="Peaceful nature-inspired living room with a green plant wall and wooden furniture" loading="lazy">
+        </figure>
+        <div class="story-text reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2 id="story-heading">Make Room for a More Natural Life.</h2>
+          <p>At UrbanFloraHome, we believe thoughtful design and natural elements can make everyday living more beautiful. Explore timeless pieces that bring warmth, greenery, and harmony into your home.</p>
+          <p>From small city balconies to generous country gardens, we help you create spaces where life slows down and flourishes.</p>
+          <a href="#inspiration" class="btn btn-outline">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ G. SEASONAL COLLECTION ============ -->
+    <section class="seasonal" id="seasonal" aria-labelledby="seasonal-heading">
+      <img class="seasonal-img" src="images/seasonal-patio.jpg"
+           alt="Elegant outdoor terrace at golden hour with lounge furniture, terracotta planters and warm string lights" loading="lazy">
+      <div class="seasonal-overlay" aria-hidden="true"></div>
+      <div class="seasonal-content reveal">
+        <p class="eyebrow eyebrow-light">Seasonal Collection</p>
+        <h2 id="seasonal-heading">Your Outdoor Escape Starts Here.</h2>
+        <p>Garden furniture, outdoor planters, ambient lighting and accessories &mdash; everything for long evenings under open skies.</p>
+        <a href="#shop" class="btn btn-light" data-nav-filter="Garden &amp; Outdoor">Shop Outdoor Living</a>
+      </div>
+    </section>
+
+    <!-- ============ H. INSPIRATION & BLOG ============ -->
+    <section class="section inspiration" id="inspiration" aria-labelledby="inspiration-heading">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Journal</p>
+          <h2 id="inspiration-heading">Inspiration &amp; Ideas</h2>
+          <p class="section-sub">Notes on living beautifully with nature.</p>
+        </header>
+        <div class="article-grid">
+          <article class="article-card reveal">
+            <a href="#inspiration" class="article-link" data-article="7 Ways to Bring Nature Into Your Home">
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Modern living room filled with houseplants and natural light" loading="lazy">
+              <div class="article-body">
+                <time datetime="2026-09-14">14 September 2026</time>
+                <h3>7 Ways to Bring Nature Into Your Home</h3>
+                <p>Simple, high-impact ideas &mdash; from statement plants to raw materials &mdash; that reconnect your rooms with the outdoors.</p>
+                <span class="text-link">Read More
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+          <article class="article-card reveal">
+            <a href="#inspiration" class="article-link" data-article="Create a Beautiful Small Balcony Garden">
+              <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=700&q=80" alt="Lush green balcony garden with potted plants and herbs" loading="lazy">
+              <div class="article-body">
+                <time datetime="2026-08-28">28 August 2026</time>
+                <h3>Create a Beautiful Small Balcony Garden</h3>
+                <p>Turn even the tiniest balcony into a green retreat with the right plants, pots and a little vertical thinking.</p>
+                <span class="text-link">Read More
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+          <article class="article-card reveal">
+            <a href="#inspiration" class="article-link" data-article="Choosing the Perfect Plants for Every Room">
+              <img src="https://images.unsplash.com/photo-1611211232932-da3113c5b960?auto=format&fit=crop&w=700&q=80" alt="Snake plant with striking green leaves in a bright room" loading="lazy">
+              <div class="article-body">
+                <time datetime="2026-08-09">9 August 2026</time>
+                <h3>Choosing the Perfect Plants for Every Room</h3>
+                <p>Light, humidity and lifestyle: a room-by-room guide to picking houseplants that will genuinely thrive.</p>
+                <span class="text-link">Read More
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ I. NEWSLETTER ============ -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <img class="newsletter-bg" src="https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true" loading="lazy">
+      <div class="newsletter-overlay" aria-hidden="true"></div>
+      <div class="newsletter-inner reveal">
+        <h2 id="newsletter-heading">Grow Something Beautiful.</h2>
+        <p>Get seasonal inspiration, practical gardening tips, and updates on new collections.</p>
+        <form id="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Your email address" autocomplete="email" required>
+          <button type="submit" class="btn btn-light">Subscribe</button>
+        </form>
+        <p class="form-message" id="newsletter-message" role="status"></p>
+      </div>
+    </section>
+
+    <!-- ============ J. CUSTOMER REVIEWS ============ -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2 id="reviews-heading">What Our Customers Say</h2>
+        </header>
+        <div class="review-grid">
+          <blockquote class="review-card reveal">
+            <div class="stars" aria-label="Rated 5 out of 5 stars"></div>
+            <p>&ldquo;My monstera arrived perfectly packed and is now the heart of our living room. The quality exceeded my expectations.&rdquo;</p>
+            <footer>
+              <span class="review-avatar" aria-hidden="true">SM</span>
+              <div><strong>Sofia M&uuml;ller</strong><span>Berlin, Germany</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <div class="stars" aria-label="Rated 5 out of 5 stars"></div>
+            <p>&ldquo;Beautiful, timeless pieces. The oak plant stand feels hand-made and looks stunning next to our reading chair.&rdquo;</p>
+            <footer>
+              <span class="review-avatar" aria-hidden="true">LB</span>
+              <div><strong>Lucas Bernard</strong><span>Lyon, France</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <div class="stars" aria-label="Rated 4.5 out of 5 stars"></div>
+            <p>&ldquo;Our terrace is completely transformed. The solar lights create the most magical atmosphere on summer evenings.&rdquo;</p>
+            <footer>
+              <span class="review-avatar" aria-hidden="true">EV</span>
+              <div><strong>Elena Visser</strong><span>Amsterdam, Netherlands</span></div>
+            </footer>
+          </blockquote>
+        </div>
+        <p class="demo-note">Sample testimonials shown for demonstration purposes.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ K. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo logo-light" aria-label="UrbanFloraHome — home">
+          <svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12zm0 18a6 6 0 0 1-6-6c0-.5.06-1 .17-1.5C7.9 15 10.3 16.8 12 19c1.7-2.2 4.1-4 5.83-6.5.11.5.17 1 .17 1.5a6 6 0 0 1-6 6z"/>
+          </svg>
+          <span class="logo-text">UrbanFlora<em>Home</em></span>
+        </a>
+        <p>Nature-inspired home and garden essentials for beautiful, comfortable living across Europe.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram (demo link)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest (demo link)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9.5 21c1-3 1.6-6 2-9m.5-2.5c-.3-1.6.7-3 2.2-3 1.5 0 2.4 1.1 2.4 2.6 0 2.2-1.4 4.2-3.3 4.2-.9 0-1.5-.5-1.3-1.3"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook (demo link)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M14 8h3V5h-3a4 4 0 0 0-4 4v2H7v3h3v7h3v-7h3l1-3h-4V9a1 1 0 0 1 1-1z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Shop">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#shop" data-nav-filter="Indoor Plants">Indoor Plants</a></li>
+          <li><a href="#shop" data-nav-filter="Garden &amp; Outdoor">Garden &amp; Outdoor</a></li>
+          <li><a href="#shop" data-nav-filter="Home Decor">Home Decor</a></li>
+          <li><a href="#shop" data-nav-filter="Planters &amp; Pots">Planters &amp; Pots</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Customer service">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#" data-footer-info="delivery">Delivery Information</a></li>
+          <li><a href="#" data-footer-info="returns">Returns &amp; Exchanges</a></li>
+          <li><a href="#" data-footer-info="privacy">Privacy Policy</a></li>
+          <li><a href="#" data-footer-info="terms">Terms &amp; Conditions</a></li>
+          <li><a href="#" data-footer-info="cookies">Cookie Preferences</a></li>
+          <li><a href="#" data-footer-info="contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col footer-newsletter">
+        <h3>Stay Inspired</h3>
+        <p>Seasonal ideas and new collections, straight to your inbox.</p>
+        <form class="footer-newsletter-form" id="footer-newsletter-form" novalidate>
+          <label class="visually-hidden" for="footer-newsletter-email">Email address</label>
+          <input type="email" id="footer-newsletter-email" placeholder="Email address" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary btn-small">Sign Up</button>
+        </form>
+        <p class="form-message" id="footer-newsletter-message" role="status"></p>
+        <p class="footer-shipping">Shipping within the EU &mdash; rates and destinations to be confirmed at checkout.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UrbanFloraHome. All rights reserved. Demonstration website &mdash; no real orders are processed.</p>
+    </div>
+  </footer>
+
+  <!-- ============ OVERLAYS ============ -->
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search products" hidden>
+    <div class="search-panel">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="search-input" placeholder="Search plants, pots, furniture&hellip;" aria-label="Search products" autocomplete="off">
+        <button class="icon-btn" id="search-close" aria-label="Close search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="search-results">
+        <p class="search-hint">Start typing to search our collection.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart drawer -->
+  <div class="drawer-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your Bag <span class="drawer-count" id="cart-drawer-count">(0)</span></h2>
+      <button class="icon-btn" id="cart-close" aria-label="Close bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="cart-items"><!-- rendered by script.js --></div>
+    <div class="drawer-foot" id="cart-foot">
+      <div class="subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">&euro;0.00</strong>
+      </div>
+      <p class="drawer-note">Delivery calculated at checkout. Taxes included.</p>
+      <button class="btn btn-primary btn-block" id="checkout-btn">Checkout (Demo)</button>
+    </div>
+  </aside>
+
+  <!-- Wishlist drawer -->
+  <div class="drawer-backdrop" id="wishlist-backdrop" hidden></div>
+  <aside class="cart-drawer wishlist-drawer" id="wishlist-drawer" aria-label="Wishlist" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Wishlist</h2>
+      <button class="icon-btn" id="wishlist-close" aria-label="Close wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlist-items"><!-- rendered by script.js --></div>
+  </aside>
+
+  <!-- Quick view modal -->
+  <div class="modal" id="quickview" role="dialog" aria-modal="true" aria-labelledby="qv-name" hidden>
+    <div class="modal-card">
+      <button class="icon-btn modal-close" id="qv-close" aria-label="Close quick view">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="qv-media">
+        <img id="qv-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+        <span class="product-badge" id="qv-badge" hidden></span>
+      </div>
+      <div class="qv-info">
+        <p class="qv-category" id="qv-category"></p>
+        <h2 id="qv-name"></h2>
+        <div class="qv-rating" id="qv-rating"></div>
+        <p class="qv-price" id="qv-price"></p>
+        <p class="qv-desc" id="qv-desc"></p>
+        <p class="qv-dims" id="qv-dims"></p>
+        <div class="qv-actions">
+          <div class="qty-stepper" aria-label="Quantity">
+            <button type="button" id="qv-minus" aria-label="Decrease quantity">&minus;</button>
+            <span id="qv-qty" aria-live="polite">1</span>
+            <button type="button" id="qv-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn-primary" id="qv-add">Add to Cart</button>
+          <button class="icon-btn qv-wish" id="qv-wish" aria-label="Toggle wishlist">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20.5C7 16.5 3 13.2 3 9.3 3 6.4 5.2 4.5 7.7 4.5c1.7 0 3.3.9 4.3 2.4 1-1.5 2.6-2.4 4.3-2.4 2.5 0 4.7 1.9 4.7 4.8 0 3.9-4 7.2-9 11.2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info modal (footer links: delivery, returns, privacy, terms, cookies, contact) -->
+  <div class="modal" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title" hidden>
+    <div class="modal-card info-modal-card">
+      <button class="icon-btn modal-close" id="info-modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <h2 id="info-modal-title"></h2>
+      <div id="info-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Cookie consent (GDPR-conscious; no tracking scripts are loaded either way) -->
+  <div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie consent" hidden>
+    <p>We use a small number of essential cookies to remember your cart and preferences. No advertising or tracking cookies are set on this demonstration site.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline btn-small" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-small" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <!-- Toast notifications -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
